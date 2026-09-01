@@ -18,9 +18,11 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 ## Contenuti
 
 - Folla composta da centinaia di unità indipendenti
-- Portali additivi e moltiplicatori
-- Scontri folla contro folla
-- Boss e base finale con difficoltà crescente
+- Soldati pseudo-3D animati con luci, ombre e movimento degli arti
+- Tre file di portali additivi e moltiplicatori per livello
+- Esercito rosso e boss che avanzano verso il cannone
+- Scontri folla contro folla e base finale
+- Difficoltà Facile, Normale e Difficile
 - Cannoni e boss diversi tra i livelli
 - Interfaccia responsive per desktop e telefono
 

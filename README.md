@@ -23,6 +23,9 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Esercito rosso e boss che avanzano verso il cannone
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
+- Partite della durata minima di 60 secondi
+- Rinforzi nemici ogni sette secondi e integrità della base
+- Casse numerate distruttibili con armi, unità bonus ed evoluzioni del danno
 - Cannoni e boss diversi tra i livelli
 - Interfaccia responsive per desktop e telefono
 

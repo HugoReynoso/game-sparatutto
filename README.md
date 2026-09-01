@@ -1,6 +1,6 @@
 # Neon Bastion
 
-Twin-stick survival shooter ambientato in un campo di battaglia fantascientifico. Difendi il portale insieme a soldati, mech e torrette automatiche contro ondate di mostri e boss.
+Crowd battle arcade ambientato in un campo di battaglia fantascientifico. Controlla il cannone, moltiplica la folla attraverso i portali e travolgi l'esercito nemico fino al boss.
 
 ## 🎮 Demo online
 
@@ -10,19 +10,19 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 
 ## Comandi
 
-- **WASD** — movimento
-- **Mouse** — mira
-- **Clic sinistro** — spara
-- **Spazio** — impulso ad area
+- **Trascina il mouse o il dito** — sposta il cannone
+- **A/D o frecce** — controllo alternativo da tastiera
+- Il cannone genera automaticamente i soldati
+- Scegli il portale `+N` o `×N` per aumentare la folla
 
 ## Contenuti
 
-- Ondate progressive e quattro famiglie di mostri
-- Boss periodici con barra della vita
-- Soldati e mech alleati
-- Torrette, portale, barriera e reattore
-- Tre armi, monete, punteggio e cure
-- Interfaccia responsive per browser desktop
+- Folla composta da centinaia di unità indipendenti
+- Portali additivi e moltiplicatori
+- Scontri folla contro folla
+- Boss e base finale con difficoltà crescente
+- Cannoni e boss diversi tra i livelli
+- Interfaccia responsive per desktop e telefono
 
 ## Avvio locale
 

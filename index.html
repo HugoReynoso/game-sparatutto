@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Neon Bastion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <section id="hud">
+    <div class="brand">NEON BASTION</div>
+    <div class="stats"><span id="wave">ONDATA 1</span><span id="score">0</span><span id="coins">★ 0</span></div>
+    <div class="bar"><i id="hp"></i></div>
+    <div id="boss" class="boss hidden"><b>MINACCIA ALFA</b><div><i></i></div></div>
+  </section>
+  <aside id="help"><b>WASD</b> muovi · <b>MOUSE</b> mira · <b>CLIC</b> spara · <b>SPAZIO</b> impulso</aside>
+  <section id="start" class="panel">
+    <img src="assets/player.png" alt="Soldato robot">
+    <div><small>ARCADE SURVIVAL</small><h1>NEON<br>BASTION</h1><p>Difendi il portale dalle orde aliene. I soldati alleati e le torrette combattono al tuo fianco.</p><button id="play">INIZIA MISSIONE</button></div>
+  </section>
+  <section id="end" class="panel hidden"><div><small>MISSIONE TERMINATA</small><h1>BASTIONE<br>CADUTO</h1><p id="result"></p><button id="again">RIPROVA</button></div></section>
+  <script src="game.js"></script>
+</body>
+</html>

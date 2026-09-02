@@ -24,8 +24,10 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Dal livello 4 i moltiplicatori compaiono molto più spesso, su corsie e altezze variabili
 - Combinazioni positive, negative e rare moltiplicazioni: `+10`, `-5`, `-20`, `×2`
 - Esercito rosso e boss che avanzano verso il cannone
+- Esercito rosso più numeroso ma con soldati rallentati del 10%
 - Soldati giganti blu-gialli caricabili ogni 10 secondi e giganti rossi più resistenti tra i rinforzi
 - Ostacoli diversi per mondo: muri illustrati distruttibili senza premio, vere porte metalliche scorrevoli, aste rotanti con spinta fisica e tubi deviatori
+- Porte collocate su una sola corsia e larghe al massimo un terzo della carreggiata
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
 - Bilanciamento alleggerito del 5% dal livello 2 in avanti

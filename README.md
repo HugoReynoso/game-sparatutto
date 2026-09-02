@@ -20,11 +20,11 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 
 - Folla composta da centinaia di unità indipendenti
 - Soldati pseudo-3D animati con luci, ombre e movimento degli arti
-- Portali mobili che arrivano nel tempo, senza mostrare tutte le scelte insieme
+- Portali mobili più piccoli che arrivano nel tempo e mostrano il conteggio esatto prima/dopo
 - Combinazioni positive, negative e rare moltiplicazioni: `+10`, `-5`, `-20`, `×2`
 - Esercito rosso e boss che avanzano verso il cannone
 - Soldati giganti blu-gialli caricabili ogni 10 secondi e giganti rossi più resistenti tra i rinforzi
-- Ostacoli diversi per mondo: blocchi distruttibili senza premio, porte temporizzate, aste rotanti e tubi deviatori
+- Ostacoli diversi per mondo: blocchi distruttibili senza premio, porte metalliche temporizzate, aste rotanti con spinta fisica e tubi deviatori
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
 - Partite della durata minima di 60 secondi

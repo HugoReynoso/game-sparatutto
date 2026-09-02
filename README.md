@@ -19,11 +19,14 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 
 - Folla composta da centinaia di unità indipendenti
 - Soldati pseudo-3D animati con luci, ombre e movimento degli arti
-- Tre file di portali additivi e moltiplicatori per livello
+- Tre file di portali: bonus additivi iniziali e un solo moltiplicatore nella zona finale
 - Esercito rosso e boss che avanzano verso il cannone
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
 - Partite della durata minima di 60 secondi
+- Soldati blu e rossi con velocità di avanzamento triplicata
+- Boss nascosto durante la battaglia e ingresso soltanto dopo il minuto obbligatorio
+- Boss multipli in sequenza a partire dai livelli avanzati
 - Rinforzi nemici ogni sette secondi e integrità della base
 - Casse numerate distruttibili con armi, unità bonus ed evoluzioni del danno
 - Cannoni e boss diversi tra i livelli

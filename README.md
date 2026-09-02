@@ -21,6 +21,7 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Folla composta da centinaia di unità indipendenti
 - Soldati pseudo-3D animati con luci, ombre e movimento degli arti
 - Portali mobili più piccoli che arrivano nel tempo e mostrano il conteggio esatto prima/dopo
+- Dal livello 4 i moltiplicatori compaiono molto più spesso, su corsie e altezze variabili
 - Combinazioni positive, negative e rare moltiplicazioni: `+10`, `-5`, `-20`, `×2`
 - Esercito rosso e boss che avanzano verso il cannone
 - Soldati giganti blu-gialli caricabili ogni 10 secondi e giganti rossi più resistenti tra i rinforzi
@@ -38,7 +39,8 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Menu di pausa con Riprendi, Ricomincia e Torna alla home
 - Home multilingua in italiano, inglese e spagnolo
 - Musica elettronica procedurale con comando audio
-- Divisori centrali che separano fisicamente la folla
+- Divisori e muri pseudo-3D collocati in posizioni differenti in ogni livello
+- Il boss finale continua ad avanzare fino al cannone e non si ferma a metà campo
 - Tutti gli asset originali impiegati come unità, armi, boss, premi e scenario
 - Cannoni e boss diversi tra i livelli
 - Interfaccia responsive per desktop e telefono

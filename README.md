@@ -28,6 +28,7 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Ostacoli diversi per mondo: muri illustrati distruttibili senza premio, vere porte metalliche scorrevoli, aste rotanti con spinta fisica e tubi deviatori
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
+- Bilanciamento alleggerito del 5% dal livello 2 in avanti
 - Partite della durata minima di 60 secondi
 - Soldati blu e rossi con velocità di avanzamento triplicata
 - Boss nascosto durante la battaglia e ingresso soltanto dopo il minuto obbligatorio

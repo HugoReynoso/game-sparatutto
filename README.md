@@ -25,7 +25,7 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Combinazioni positive, negative e rare moltiplicazioni: `+10`, `-5`, `-20`, `×2`
 - Esercito rosso e boss che avanzano verso il cannone
 - Soldati giganti blu-gialli caricabili ogni 10 secondi e giganti rossi più resistenti tra i rinforzi
-- Ostacoli diversi per mondo: blocchi distruttibili senza premio, porte metalliche temporizzate, aste rotanti con spinta fisica e tubi deviatori
+- Ostacoli diversi per mondo: muri illustrati distruttibili senza premio, vere porte metalliche scorrevoli, aste rotanti con spinta fisica e tubi deviatori
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
 - Partite della durata minima di 60 secondi
@@ -39,7 +39,7 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Menu di pausa con Riprendi, Ricomincia e Torna alla home
 - Home multilingua in italiano, inglese e spagnolo
 - Musica elettronica procedurale con comando audio
-- Divisori e muri pseudo-3D collocati in posizioni differenti in ogni livello
+- Divisori di lunghezza e posizione differenti in ogni livello, solidi anche contro l'esercito rosso
 - Il boss finale continua ad avanzare fino al cannone e non si ferma a metà campo
 - Tutti gli asset originali impiegati come unità, armi, boss, premi e scenario
 - Cannoni e boss diversi tra i livelli

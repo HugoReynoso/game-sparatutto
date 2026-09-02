@@ -13,6 +13,7 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - **Trascina il mouse o il dito** — sposta il cannone
 - **A/D o frecce** — controllo alternativo da tastiera
 - Il cannone genera automaticamente i soldati
+- **Barra GIGANTE o Spazio** — lancia il soldato speciale quando la carica da 10 secondi è completa
 - Scegli il portale `+N` o `×N` per aumentare la folla
 
 ## Contenuti
@@ -22,6 +23,8 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Portali mobili che arrivano nel tempo, senza mostrare tutte le scelte insieme
 - Combinazioni positive, negative e rare moltiplicazioni: `+10`, `-5`, `-20`, `×2`
 - Esercito rosso e boss che avanzano verso il cannone
+- Soldati giganti blu-gialli caricabili ogni 10 secondi e giganti rossi più resistenti tra i rinforzi
+- Ostacoli diversi per mondo: blocchi distruttibili senza premio, porte temporizzate, aste rotanti e tubi deviatori
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
 - Partite della durata minima di 60 secondi
@@ -39,6 +42,7 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Tutti gli asset originali impiegati come unità, armi, boss, premi e scenario
 - Cannoni e boss diversi tra i livelli
 - Interfaccia responsive per desktop e telefono
+- Sequenza finale `3, 2, 1, VITTORIA!` e passaggio automatico al livello successivo
 
 ## Avvio locale
 

@@ -31,6 +31,12 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Rinforzi nemici ogni sette secondi e integrità della base
 - Casse numerate distruttibili con armi, unità bonus ed evoluzioni del danno
 - Casse mobili con anteprima dell'arma e trasformazione visibile del cannone
+- 20 vite disponibili all'inizio di ogni livello
+- Menu di pausa con Riprendi, Ricomincia e Torna alla home
+- Home multilingua in italiano, inglese e spagnolo
+- Musica elettronica procedurale con comando audio
+- Divisori centrali che separano fisicamente la folla
+- Tutti gli asset originali impiegati come unità, armi, boss, premi e scenario
 - Cannoni e boss diversi tra i livelli
 - Interfaccia responsive per desktop e telefono
 

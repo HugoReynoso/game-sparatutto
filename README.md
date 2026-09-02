@@ -19,7 +19,8 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 
 - Folla composta da centinaia di unità indipendenti
 - Soldati pseudo-3D animati con luci, ombre e movimento degli arti
-- Tre file di portali: bonus additivi iniziali e un solo moltiplicatore nella zona finale
+- Portali mobili che arrivano nel tempo, senza mostrare tutte le scelte insieme
+- Combinazioni positive, negative e rare moltiplicazioni: `+10`, `-5`, `-20`, `×2`
 - Esercito rosso e boss che avanzano verso il cannone
 - Scontri folla contro folla e base finale
 - Difficoltà Facile, Normale e Difficile
@@ -29,6 +30,7 @@ La demo viene aggiornata automaticamente a ogni pubblicazione sul branch `main`.
 - Boss multipli in sequenza a partire dai livelli avanzati
 - Rinforzi nemici ogni sette secondi e integrità della base
 - Casse numerate distruttibili con armi, unità bonus ed evoluzioni del danno
+- Casse mobili con anteprima dell'arma e trasformazione visibile del cannone
 - Cannoni e boss diversi tra i livelli
 - Interfaccia responsive per desktop e telefono
 

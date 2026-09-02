@@ -6,8 +6,42 @@ const modes={easy:{enemy:1,boss:1,speed:.9,rate:1,label:'FACILE'},normal:{enemy:
 const words={it:{intro:'Resisti almeno 60 secondi, supera i portali e abbatti le casse numerate per ottenere armi ed evoluzioni.',language:'LINGUA',difficulty:'DIFFICOLTÀ',easy:'FACILE',normal:'NORMALE',hard:'DIFFICILE',play:'INIZIA BATTAGLIA',paused:'PAUSA',resume:'RIPRENDI',restart:'RICOMINCIA',home:'TORNA ALLA HOME'},en:{intro:'Survive for at least 60 seconds, cross the gates and destroy numbered crates to unlock weapons and upgrades.',language:'LANGUAGE',difficulty:'DIFFICULTY',easy:'EASY',normal:'NORMAL',hard:'HARD',play:'START BATTLE',paused:'PAUSED',resume:'RESUME',restart:'RESTART',home:'BACK TO HOME'},es:{intro:'Resiste al menos 60 segundos, atraviesa los portales y destruye cajas numeradas para conseguir armas y mejoras.',language:'IDIOMA',difficulty:'DIFICULTAD',easy:'FÁCIL',normal:'NORMAL',hard:'DIFÍCIL',play:'INICIAR BATALLA',paused:'PAUSA',resume:'CONTINUAR',restart:'REINICIAR',home:'VOLVER AL INICIO'}};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),rnd=(a,b)=>a+Math.random()*(b-a);
 function applyLanguage(){document.documentElement.lang=language;document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=words[language][el.dataset.i18n]||el.textContent)}
-function ensureAudio(){if(audio)return;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;const context=new AC(),gain=context.createGain(),bass=context.createOscillator(),lead=context.createOscillator(),lfo=context.createOscillator(),lfoGain=context.createGain();bass.type='triangle';bass.frequency.value=82;lead.type='sine';lead.frequency.value=164;lfo.frequency.value=.22;lfoGain.gain.value=22;lfo.connect(lfoGain);lfoGain.connect(lead.frequency);bass.connect(gain);lead.connect(gain);gain.connect(context.destination);gain.gain.value=.055;bass.start();lead.start();lfo.start();audio={context,gain}}
-function toggleMusic(){ensureAudio();musicMuted=!musicMuted;if(audio)audio.gain.gain.setTargetAtTime(musicMuted?0:.055,audio.context.currentTime,.08);$('#music').textContent=musicMuted?'🔇':'🔊'}
+
+/*function ensureAudio()
+{if(audio)return;const AC=window.AudioContext||window.webkitAudioContext;
+    if(!AC)return;const context=new AC(),gain=context.createGain(),bass=context.createOscillator(),lead=context.createOscillator(),lfo=context.createOscillator(),
+    lfoGain=context.createGain();bass.type='triangle';bass.frequency.value=82;lead.type='sine';lead.frequency.value=164;lfo.frequency.value=.22;lfoGain.gain.value=22;lfo.connect(lfoGain);
+    lfoGain.connect(lead.frequency);bass.connect(gain);lead.connect(gain);gain.connect(context.destination);gain.gain.value=.055;bass.start();lead.start();lfo.start();audio={context,gain}}*/
+
+    function ensureAudio() {
+  if (audio) return;
+  
+  // Crea l'elemento audio con il tuo file
+  const musicFile = new Audio('assets/kulakovka-break-291455.mp3'); 
+  musicFile.loop = true; // Riproduce in ciclo continuo
+  musicFile.volume = 0.5; // Volume da 0.0 a 1.0
+
+  audio = { 
+    element: musicFile, 
+    playing: false 
+  };
+}
+
+/*function toggleMusic(){ensureAudio();musicMuted=!musicMuted;if(audio)audio.gain.gain.setTargetAtTime(musicMuted?0:.055,audio.context.currentTime,.08);$('#music').textContent=musicMuted?'🔇':'🔊'}*/
+
+function toggleMusic() {
+  ensureAudio();
+  musicMuted = !musicMuted;
+
+  if (musicMuted) {
+    audio.element.pause();
+  } else {
+    audio.element.play();
+  }
+
+  $('#music').textContent = musicMuted ? '🔇' : '🔊';
+}
+
 function resize(){D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;canvas.width=W*D;canvas.height=H*D;ctx.setTransform(D,0,0,D,0,0)}addEventListener('resize',resize);resize();
 function point(e){const r=canvas.getBoundingClientRect();pointer.x=(e.clientX-r.left)*W/r.width}canvas.onpointerdown=e=>{pointer.down=true;point(e);canvas.setPointerCapture(e.pointerId)};canvas.onpointermove=point;canvas.onpointerup=canvas.onpointercancel=()=>pointer.down=false;
 addEventListener('keydown',e=>{if(!state)return;if(['ArrowLeft','KeyA'].includes(e.code))pointer.x=state.cannon.x-80;if(['ArrowRight','KeyD'].includes(e.code))pointer.x=state.cannon.x+80});
@@ -42,7 +76,10 @@ function worldObjects(){for(const d of state.decorations){const y=(d.y+state.tim
 function sprite(im,x,y,size,rot=0){if(!im?.complete)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.drawImage(im,-size/2,-size/2,size,size);ctx.restore()}
 function draw(){road();if(!state)return;worldObjects();const b=state.boss;ctx.fillStyle='#ffae00';round(W/2-55,8,110,78,14);ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=4;ctx.stroke();if(!b.active){ctx.fillStyle='#fff';ctx.font='900 42px Rajdhani';ctx.textAlign='center';ctx.fillText('?',W/2,61)}if(b.active){ctx.fillStyle='#17203355';ctx.beginPath();ctx.ellipse(b.x,b.y+30,38,11,0,0,7);ctx.fill();const bossBob=Math.sin(state.time*5)*4,bossTilt=Math.sin(state.time*3)*.045;sprite(images[b.type],b.x,b.y+bossBob,b.hit>0?88:80,bossTilt)}state.enemies.forEach(e=>unit(e,true));state.gates.forEach(gate);state.crates.forEach(crate);state.units.forEach(u=>unit(u));ctx.save();ctx.translate(state.cannon.x,state.cannon.y);ctx.fillStyle='#06396a';ctx.beginPath();ctx.arc(0,18,38,0,7);ctx.fill();ctx.strokeStyle=state.cannon.evolution?'#fff34d':'#50eaff';ctx.lineWidth=5;ctx.shadowBlur=state.cannon.evolution?22:0;ctx.shadowColor='#ffe82e';ctx.stroke();ctx.restore();ctx.save();ctx.shadowBlur=state.cannon.evolution?24:0;ctx.shadowColor='#ffe82e';sprite(images[['gun1','gun2','gun3'][state.cannon.weapon]],state.cannon.x,state.cannon.y-4,78+state.cannon.evolution*5,-Math.PI/2);ctx.restore();ctx.fillStyle='#081b34dd';round(state.cannon.x-43,state.cannon.y+26,86,25,10);ctx.fill();ctx.fillStyle=state.cannon.evolution?'#fff34d':'#fff';ctx.font='900 14px Rajdhani';ctx.textAlign='center';ctx.fillText(`EVOLUZIONE ${state.cannon.evolution}`,state.cannon.x,state.cannon.y+44);for(const p of state.particles){ctx.globalAlpha=p.life/p.max;ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fill()}for(const t of state.texts){ctx.globalAlpha=t.life/t.max;ctx.fillStyle=t.color;ctx.font='900 25px Rajdhani';ctx.fillText(t.value,t.x,t.y)}ctx.globalAlpha=1}
 function finish(won){const end=$('#end');$('#end small').textContent=won?'BASE CONQUISTATA':'ESERCITO ESAURITO';$('#end h1').innerHTML=won?'VITTORIA!':'RIPROVA';$('#result').textContent=won?`Hai sconfitto il boss del livello ${state.level}. La prossima battaglia sarà più difficile.`:'Scegli il portale migliore e crea una folla abbastanza grande da superare l’esercito rosso.';$('#again').textContent=won?'LIVELLO SUCCESSIVO':'RIPETI LIVELLO';end.classList.remove('hidden')}
-function start(next=false){ensureAudio();if(audio&&!musicMuted)audio.context.resume();$('#start').classList.add('hidden');$('#end').classList.add('hidden');$('#pause-menu').classList.add('hidden');reset(next&&state?.won?state.level+1:(state?.level||1))}
+
+function start(next=false){ensureAudio();if(audio && !musicMuted) audio.element.play();$('#start').classList.add('hidden');$('#end').classList.add('hidden');
+    $('#pause-menu').classList.add('hidden');reset(next&&state?.won?state.level+1:(state?.level||1))}
+  
 function pauseGame(show=true){if(!state?.running)return;state.paused=show;$('#pause-menu').classList.toggle('hidden',!show)}
 document.querySelectorAll('[data-difficulty]').forEach(button=>button.onclick=()=>{difficulty=button.dataset.difficulty;document.querySelectorAll('[data-difficulty]').forEach(b=>b.classList.toggle('active',b===button))});
 $('#language').onchange=e=>{language=e.target.value;applyLanguage()};$('#play').onclick=()=>start(false);$('#again').onclick=()=>start(true);$('#pause').onclick=()=>pauseGame(true);$('#resume').onclick=()=>pauseGame(false);$('#restart').onclick=()=>{const level=state?.level||1;$('#pause-menu').classList.add('hidden');reset(level)};$('#home').onclick=()=>{if(state)state.running=false;state=null;$('#pause-menu').classList.add('hidden');$('#end').classList.add('hidden');$('#start').classList.remove('hidden');ui.boss.classList.add('hidden')};$('#music').onclick=toggleMusic;addEventListener('keydown',e=>{if(e.code==='Escape'&&state?.running)pauseGame(!state.paused)});applyLanguage();function loop(t){const dt=Math.min(.032,(t-last)/1000||0);last=t;update(dt);draw();requestAnimationFrame(loop)}requestAnimationFrame(loop);
